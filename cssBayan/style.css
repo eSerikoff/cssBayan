@@ -19,6 +19,7 @@ body {
     margin: 0 auto;
 }
 .container {
+    flex-direction: column;
     width: 60em;
     margin: 0 auto;
     padding: 3em 0;
@@ -65,6 +66,11 @@ article {
     display: flex;
     width: 90%;
 }
+.div_row > .label_icon {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
 .label_box > div {
     border-top: 0.1em solid #9e9e9b;
 }
@@ -87,4 +93,31 @@ article {
 .box input:active ~ span {
     color: blue;
 }
+.label_icon {
+    width: 0.5em;
+    height: 0.7em;
+    align-items: center;
+}
+.label_box:hover .label_icon {
+    transform: rotate(90deg);
+}
+.label_box input:checked ~ .label_icon {
+    transform: rotate(90deg);
+}
 
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .label_box {
+        font-size: 0.7em;
+    }
+}
+@media (max-width: 820px) {
+    h1 {
+        font-size: 2em;
+    }
+    .label_box {
+        font-size: 1em;
+    }
+}
