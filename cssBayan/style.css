@@ -77,13 +77,13 @@ article {
 .label_box article {
     overflow: hidden;
     height: 0em;
-    transition: height 0.4s ease-in-out;
+    transition: height 0.6s ease-in-out;
 }
 .label_box input:checked ~ article {
     height: 14em;
 }
 .label_box:hover input ~ article {
-    transition: height 0.4s ease-in-out;
+    transition: height 0.6s ease-in-out;
     height: 14em;
 }
 .label_box:active {
@@ -99,6 +99,7 @@ article {
     align-items: center;
 }
 .label_box:hover .label_icon {
+    transition: transform .8s ease-in-out;
     transform: rotate(90deg);
 }
 .label_box input:checked ~ .label_icon {
